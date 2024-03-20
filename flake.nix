@@ -34,6 +34,7 @@
               directory = ./nix;
             }
           );
+          packages.default = config.legacyPackages.nixos-cdi-glvnd-repro;
           devShells.default = pkgs.mkShell {
             packages = [ (pkgs.python3.withPackages (ps: with ps; [ vtk ])) ];
           };
